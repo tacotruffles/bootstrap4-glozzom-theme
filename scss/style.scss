@@ -18,6 +18,10 @@ body {
    }
 }
 
+/*
+ *    ABOUT PAGE
+ */
+
 .carousel-item {
    height: 450px;
 }
@@ -72,9 +76,27 @@ body {
       color: white;
    }
 }
+
 /*
-   MEDIA QUERIES 
-*/
+ *    ABOUT PAGE
+ */
+
+ #page-header {
+    height: 200px;
+    background: url('../img/image1.jpg');
+    background-position: 50% -360px; // x-centered fixed-y
+    background-attachment: fixed;
+    color: white;
+    border-bottom: 1px #eee solid;
+    padding-top: 50px;
+ }
+
+ .about-img {
+    margin-top: -60px;
+ }
+/*
+ *    MEDIA QUERIES 
+ */
 @media(max-width: 768px) {
    #info {
 

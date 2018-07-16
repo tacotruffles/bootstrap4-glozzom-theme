@@ -9524,6 +9524,9 @@ body {
   border-left: #444 3px solid;
 }
 
+/*
+ *    ABOUT PAGE
+ */
 .carousel-item {
   height: 450px;
 }
@@ -9580,8 +9583,25 @@ body {
 }
 
 /*
-   MEDIA QUERIES 
-*/
+ *    ABOUT PAGE
+ */
+#page-header {
+  height: 200px;
+  background: url("../img/image1.jpg");
+  background-position: 50% -360px;
+  background-attachment: fixed;
+  color: white;
+  border-bottom: 1px #eee solid;
+  padding-top: 50px;
+}
+
+.about-img {
+  margin-top: -60px;
+}
+
+/*
+ *    MEDIA QUERIES 
+ */
 @media (max-width: 768px) {
   #info .info-text {
     text-align: center;

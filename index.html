@@ -123,7 +123,7 @@
          <div class="row">
             <div class="col">
                <div class="container pt-5">
-                  <h1>Are Ready To Get Started?</h1>
+                  <h1>Are You Ready To Get Started?</h1>
                   <p class="d-none d-md-block">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, veritatis. Nesciunt sunt consequatur
                      id quisquam commodi repudiandae corporis est non!</p>
 
@@ -149,6 +149,37 @@
          </div>
       </div>
    </section>
+
+   <!-- VIDEO SECTION -->
+   <section id="video-play">
+      <div class="dark-overlay">
+         <div class="row">
+            <div class="col">
+               <div class="container p-5">
+                  <a href="#" class="video" data-video="https://www.youtube.com/embed/-3k2q9WOYKo" data-toggle="modal" data-target="#videoModal">
+                     <i class="fas fa-play fa-3x"></i>
+                  </a>
+                  <h1>See What We Do</h1>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- VIDEO MODAL -->
+   <div id="videoModal" class="modal fade">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-body">
+               <button class="close" data-dismiss="modal">
+                  <span>&times;</span>
+               </button>
+               <iframe src="" frameborder="0" height="263" width="100%" allowfullscreen></iframe>
+            </div>
+         </div>
+      </div>
+   </div>
+
    <!-- Using Full version of jQuery-->
    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
@@ -166,6 +197,20 @@
          interval: 6000,
          pause: "hover"
       })
+
+      // Video Play
+      $(function () {
+         // Auto play modal video
+         $(".video").click(function () {
+            var theModal = $(this).data("target"),
+               videoSRC = $(this).attr("data-video"),
+               videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+            $(theModal + ' iframe').attr('src', videoSRCauto);
+            $(theModal + ' button.close').click(function () {
+               $(theModal + ' iframe').attr('src', videoSRC);
+            });
+         });
+      });
    </script>
 </body>
 

@@ -1,6 +1,10 @@
 // Import Boostrap SCSS for compiling from single SCSS file...this file!
 @import "bootstrap";
 
+body {
+   overflow-x: hidden; // get rid of x-slider
+}
+
 .navbar {
    .nav-link {
       font-size: 14px;

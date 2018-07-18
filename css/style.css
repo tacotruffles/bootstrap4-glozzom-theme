@@ -9612,6 +9612,11 @@ body {
   background: #333;
 }
 
+#main-footer {
+  background: #000000;
+  color: white;
+}
+
 /*
  *    MEDIA QUERIES 
  */
